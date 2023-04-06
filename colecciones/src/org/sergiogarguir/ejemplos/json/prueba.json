@@ -1,0 +1,16 @@
+{
+  "header": {
+    "algo0": "nothing",
+    "algo1": "nothing"
+  },
+  "data": {
+    "nombre": "Jonh Doe",
+    "profesion": "Programador",
+    "edad": 25,
+    "disponibilidadParaViajar": true,
+    "rangoProfesional": {
+      "aniosDeExperiencia": 12,
+      "nivel": "Senior"
+    }
+  }
+}

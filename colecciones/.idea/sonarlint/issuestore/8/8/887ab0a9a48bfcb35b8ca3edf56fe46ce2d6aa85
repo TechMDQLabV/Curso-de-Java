@@ -1,0 +1,22 @@
+
+e
+java:S3008"ORename this field "PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±•Œº
+W
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(±•Œº
+S	java:S106"9Replace this use of System.out or System.err by a logger.(—¿íšúÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ô‹öÓ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(³ÌÎ²øÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ð×¦Ò
+Z
+java:S2147%"DCombine this catch with the one at line 35, which has the same body.(ï­£Ä
+V	java:S125-"<This block of commented-out lines of code should be removed.(•èñøÿÿÿÿ
+g
+java:S5998."LRefactor this repetition that can lead to a stack overflow for large inputs.(Æºì‡ÿÿÿÿÿ
+o
+java:S5843."TSimplify this regular expression to reduce its complexity from 26 to the 20 allowed.(Æºì‡ÿÿÿÿÿ
+a
+java:S2259"K"NullPointerException" will be thrown when invoking method "cleanSpaces()".(ú»³É
+a
+java:S2259"K"NullPointerException" will be thrown when invoking method "cleanSpaces()".(ú»³É
+b
+java:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(œËÍŽ

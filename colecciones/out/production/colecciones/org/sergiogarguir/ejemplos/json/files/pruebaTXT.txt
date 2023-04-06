@@ -1,0 +1,8 @@
+42341     "espacios previos"
+
+
+"salto de linea"                "tabulaciones"
+
+
+
+"porquerias"    		.
