@@ -25,7 +25,9 @@ public class ControlDeEficiencia {
             List<Person> persons = null;
             persons = buildPersons(CANTIDAD);
             System.out.println("------------------------------------------------------------------------------------");
+            System.out.println("------------------------------------------------------------------------------------");
             System.out.println("Iteration " + (i + 1));
+            System.out.println("------------------------------------------------------------------------------------");
             System.out.println("------------------------------------------------------------------------------------");
 
             // select a random number for concat with name to search
