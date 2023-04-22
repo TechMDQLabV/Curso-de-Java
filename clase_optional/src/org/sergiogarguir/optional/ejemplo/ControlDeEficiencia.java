@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 public class ControlDeEficiencia {
 
     private static Logger LOGGER = Logger.getLogger("ControlDeEficiencia");
-    public static int CANTIDAD = 1000;
+    public static int CANTIDAD = 100000;
 
     public static void main(String[] args) {
         //List<Person> persons = buildPersons(CANTIDAD);
@@ -43,6 +43,18 @@ public class ControlDeEficiencia {
             }
             System.out.println(System.currentTimeMillis() - startTimeHS + "ms");
             System.out.println(personFor);
+            System.out.println("======================================================================");
+
+            // Run find method with lamda anyMatch
+            long startTimeHSLamdaAnyMatch = System.currentTimeMillis();
+            boolean foundIt = findNameWithLambdaAnyMatch(persons, "Pepe " + randomNumber);
+            if (foundIt) {
+                System.out.print("Find with lamdaAnyMatch in ");
+            } else {
+                System.out.print("Not found with lamdaAnyMatch in ");
+            }
+            System.out.println(System.currentTimeMillis() - startTimeHSLamdaAnyMatch + "ms");
+            System.out.println("======================================================================");
 
             // Run find method with lamda
             long startTimeHSLamda = System.currentTimeMillis();
@@ -54,10 +66,11 @@ public class ControlDeEficiencia {
             }
             System.out.println(System.currentTimeMillis() - startTimeHSLamda + "ms");
             System.out.println(personStream);
+            System.out.println("======================================================================");
         }
 
     }
-    /*
+/*
     public static boolean findName(List<Person> people, String name) {
         for (Person person : people)
             if (person.getName().equals(name))
@@ -70,15 +83,16 @@ public class ControlDeEficiencia {
         Person p = null;
         for (Person person : people)
             if (person.getName().equals(name))
-                p = person;
+                return person;
 
         return p;
     }
-  /*
-    public static boolean findNameWithLambda(List<Person> people, String name) {
-        return people.stream().anyMatch(p -> p.getName().equals(name));
+
+    public static boolean findNameWithLambdaAnyMatch(List<Person> people, String name) {
+        return people.stream()
+                .anyMatch(p -> p.getName().equals(name));
     }
-*/
+
     public static Person findNameWithLambda(List<Person> people, String name) {
         return people.stream()
                 .filter(p -> p.getName().equals(name))

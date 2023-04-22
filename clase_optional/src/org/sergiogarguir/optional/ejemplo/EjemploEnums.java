@@ -1,13 +1,16 @@
 package org.sergiogarguir.optional.ejemplo;
 
+import org.sergiogarguir.optional.ejemplo.enums.BranchOfficeEnum;
 import org.sergiogarguir.optional.ejemplo.enums.CardProduct;
 import org.sergiogarguir.optional.ejemplo.enums.CardProduct1;
+import org.sergiogarguir.optional.ejemplo.models.BranchOffice;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.stream.Stream;
 
 public class EjemploEnums {
@@ -53,6 +56,8 @@ public class EjemploEnums {
         put("TIERRA DEL FUEGO", "V");
         put("TUCUMAN", "T");
     }};
+
+    static BranchOffice[] branchOffices = new BranchOffice[10];
 
 
     public static void main(String[] args) {
@@ -104,8 +109,15 @@ public class EjemploEnums {
         String visaDebit = "YOYBANEALT";
         String cardCode;
 
-        System.out.println(CardProduct1.valueOf(visaCredit).getCode());
 
+
+        BranchOffice branchOffice;
+        BranchOfficeEnum bo;
+        for(int i=0;i<10;i++) {
+            bo = getBranchOfficeRandom();
+            System.out.println(bo);
+        }
+        System.out.println(CardProduct1.valueOf(visaCredit).getCode());
         try{
             cardCode = CardProduct1.valueOf(masterCredit).getCode();
         }catch (IllegalArgumentException err){
@@ -166,5 +178,9 @@ public class EjemploEnums {
                                     .map(Map.Entry::getValue)
                                     .findFirst()
                                     .orElse(provinceName);
+    }
+
+    private static BranchOfficeEnum getBranchOfficeRandom(){
+        return BranchOfficeEnum.values()[new Random().nextInt(BranchOfficeEnum.values().length)];
     }
 }
