@@ -45,7 +45,7 @@ public class ControlDeEficiencia {
             }
             System.out.println(System.currentTimeMillis() - startTimeHS + "ms");
             System.out.println(personFor);
-            System.out.println("======================================================================");
+            System.out.println("====================================================================================");
 
             // Run find method with lamda anyMatch
             long startTimeHSLamdaAnyMatch = System.currentTimeMillis();
@@ -56,7 +56,7 @@ public class ControlDeEficiencia {
                 System.out.print("Not found with lamdaAnyMatch in ");
             }
             System.out.println(System.currentTimeMillis() - startTimeHSLamdaAnyMatch + "ms");
-            System.out.println("======================================================================");
+            System.out.println("====================================================================================");
 
             // Run find method with lamda
             long startTimeHSLamda = System.currentTimeMillis();
@@ -68,7 +68,7 @@ public class ControlDeEficiencia {
             }
             System.out.println(System.currentTimeMillis() - startTimeHSLamda + "ms");
             System.out.println(personStream);
-            System.out.println("======================================================================");
+            System.out.println("====================================================================================");
         }
 
     }
